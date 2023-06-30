@@ -1,0 +1,14 @@
+chromadb==0.3.26
+Cython==0.29.35
+faiss-cpu==1.7.4
+langchain==0.0.194
+langchainplus-sdk==0.0.7
+openai==0.27.8
+openapi-schema-pydantic==1.2.4
+pdf2image==1.16.3
+pypdf==3.9.1
+python-magic==0.4.27
+python-magic-bin==0.4.14
+tiktoken==0.4.0
+tqdm==4.65.0
+unstructured==0.7.2

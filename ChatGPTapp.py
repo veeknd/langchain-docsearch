@@ -2,22 +2,6 @@
 This program supports pdf files
 store the documents in in ./data
 
-requirements.text
-chromadb==0.3.26
-Cython==0.29.35
-faiss-cpu==1.7.4
-langchain==0.0.194
-langchainplus-sdk==0.0.7
-openai==0.27.8
-openapi-schema-pydantic==1.2.4
-pdf2image==1.16.3
-pypdf==3.9.1
-python-magic==0.4.27
-python-magic-bin==0.4.14
-tiktoken==0.4.0
-tqdm==4.65.0
-unstructured==0.7.2
-
 '''
 from langchain.document_loaders import PyPDFLoader
 from langchain.document_loaders import PyPDFDirectoryLoader
@@ -28,9 +12,11 @@ from langchain import OpenAI
 from langchain.chains import RetrievalQA
 import magic
 import os
+from dotenv import load_dotenv
 
-#Enter Valid OPENAI API KEY
-API_KEY= "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"
+load_dotenv()
+
+API_KEY= os.getenv('API_KEY')
 
 #Relative Directory of documents folder
 DOCUMENT_DIR= "./data"
